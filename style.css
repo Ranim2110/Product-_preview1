@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    background: hsl(30, 38%, 92%);
+    display: grid;
+    place-content: center;
+    font-family: "Montserrat", sans-serif;
+    /* font-family: "Fraunces", serif; */
+    min-height: 100vh;
+}
+
+#product {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 600px;
+    margin: 1rem;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+    border-bottom-left-radius: 15px;
+    border-top-left-radius: 15px;
+}
+
+#product .content {
+    background: hsl(0, 0%, 100%);
+    padding: 2rem;
+    border-bottom-right-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+#product .content .category {
+    font-size: 14px;
+    letter-spacing: 5px;
+    color: hsl(228, 12%, 48%);
+    font-weight: 500;
+}
+
+#product .content h1 {
+    font-family: "Fraunces", serif;
+    line-height: 1;
+    margin: 1.5rem 0;
+}
+
+#product .content .text {
+    font-size: 14px;
+    line-height: 1.6;
+    color: hsl(228, 12%, 48%);
+    font-weight: 500;
+}
+
+#product .content .price {
+    color: hsl(228, 12%, 48%);
+    display: flex;
+    align-items: center;
+    /* align-content: center; */
+    margin: 20px 0;
+}
+
+#product .content .price .dis {
+    font-weight: 700;
+    font-size: 32px;
+    margin-right: 10px;
+    color: hsl(158, 36%, 37%);
+    font-family: "Fraunces", serif;
+}
+
+button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    font-weight: 700;
+    color: hsl(0, 0%, 100%);
+    background-color: hsl(158, 42%, 18%);
+    text-align: center;
+    width: 100%;
+    cursor: pointer;
+}
+
+button::before {
+    content: "";
+    background: url("./images/icon-cart.svg");
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+}
+
+button:hover {
+    background-color: hsl(158, 36%, 37%);
+    border: 5px radius hsl(158, 42%, 18%);
+    transition: all 1s;
+}
+
+@media (max-width:1000px) {
+    #product {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        max-width: 600px;
+    }
+
+    img {
+        border-top-right-radius: 15px;
+        border-top-left-radius: 15px;
+        border-bottom-left-radius: 0px;
+    }
+}
+
+#product .content {
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 15px;
+}
+
+
